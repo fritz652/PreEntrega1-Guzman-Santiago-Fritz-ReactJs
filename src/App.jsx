@@ -14,6 +14,7 @@ import Hombre from "./pages/Hombre";
 import Mujer from "./pages/Mujer";
 import Kids from "./pages/Kids";
 import NotFound from './pages/NotFound';
+import DetailPage from "./pages/DetailPage";
 
 const  App = () => {
   return (
@@ -32,6 +33,7 @@ const  App = () => {
         <Route path="/mujer" element={<Mujer/>}/>
         <Route path="/kids" element={<Kids/>}/>
         <Route path='*' element={<NotFound/>}/>
+        <Route path="/detail/:id" element={<DetailPage/>}/>
 
       </Routes>
     </Router>

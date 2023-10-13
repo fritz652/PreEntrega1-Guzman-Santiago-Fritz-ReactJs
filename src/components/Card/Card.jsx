@@ -12,28 +12,34 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 
 
-const ItemListContainer = (data) => {
+const ItemListContainer = (prop) => {
+  const {data } = prop
+  const {
+    image,
+    title,
+    price
+  } = data
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia 
           component="img"
           //height="140"
-          image={data.data.image}
+          image={image}
           alt="green iguana"
         />
         <CardContent component="div">
           <Typography gutterBottom variant="h6" component="div">
-            {data.data.title}
+            {title}
           </Typography>
           <Typography variant="h5" color="text.secondary">
-             S/ {data.data.price}
+             S/ {price}
           </Typography>
-          <Stack direction="row" spacing={2}>
-              <Button variant="contained">Contained</Button>
-          </Stack>
         </CardContent>
       </CardActionArea>
+      <Stack direction="row" spacing={2} >
+              <Button variant="contained">Contained</Button>
+      </Stack>
     </Card>
   );
 }
