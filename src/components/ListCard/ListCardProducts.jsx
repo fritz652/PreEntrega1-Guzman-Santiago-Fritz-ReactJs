@@ -13,7 +13,6 @@ const ListCardProducts = () => {
 
   return (
     <div className="Cards-List">
-        Home
         {
             items?.map( item => (
                 <Card key={item.id} data={item}/>
