@@ -12,7 +12,7 @@ const ListCardProducts = () => {
     },[]);
 
   return (
-    <div>
+    <div className="Cards-List">
         Home
         {
             items?.map( item => (
