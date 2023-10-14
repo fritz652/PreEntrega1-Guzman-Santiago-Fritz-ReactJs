@@ -9,12 +9,16 @@ import NavBar from './components/NavBar/NavBar';
 //import ItemListContainer from './components/itemListContainer/itemListContainer';
 
 //PAGES
-import Home from "./pages/Home";
-import Hombre from "./pages/Hombre";
+//import Home from "./pages/Home";
+import ListCardProducts from "./components/ListCard/ListCardProducts";
+/* import Hombre from "./pages/Hombre";
 import Mujer from "./pages/Mujer";
-import Kids from "./pages/Kids";
+import Kids from "./pages/Kids"; */
 import NotFound from './pages/NotFound';
 import DetailPage from "./pages/DetailPage";
+
+import CategoryPage from './pages/CategoryPage';          
+
 
 const  App = () => {
   return (
@@ -28,12 +32,10 @@ const  App = () => {
         <ItemListContainer/> */}
       </div>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/hombre" element={<Hombre/>}/>
-        <Route path="/mujer" element={<Mujer/>}/>
-        <Route path="/kids" element={<Kids/>}/>
-        <Route path='*' element={<NotFound/>}/>
+        <Route path="/" element={<ListCardProducts/>}/>
         <Route path="/detail/:id" element={<DetailPage/>}/>
+        <Route path="/productos/:categoryId" element={<CategoryPage/>}/>
+        <Route path='*' element={<NotFound/>}/>
 
       </Routes>
     </Router>

@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 const ListCardProducts = () => {
     const [items, setItems] = useState([]);
 
+    
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
        /*  .then((res) =>  {
@@ -16,7 +17,7 @@ const ListCardProducts = () => {
         }); */
         .then((res) => res.json())
         .then(data => {
-            console.log(data);
+            //console.log(data);
             setItems(data)
         })
     },[]);

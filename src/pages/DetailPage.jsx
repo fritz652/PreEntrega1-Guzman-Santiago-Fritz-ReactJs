@@ -1,17 +1,12 @@
 import { useState, useEffect} from "react";
-
 import axios from "axios";
-
 import { useParams } from 'react-router-dom';
 import Card from '../components/Card/Card';
-
 
 const DetailPage = () => {
     let { id } = useParams();
  
     const [item, setItem] = useState({});
-
-    console.log(item)
 
     useEffect(() => {
         axios(`https://fakestoreapi.com/products/${id}`)

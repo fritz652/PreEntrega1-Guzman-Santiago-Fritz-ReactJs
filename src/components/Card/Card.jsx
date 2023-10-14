@@ -14,6 +14,7 @@ import Stack from '@mui/material/Stack';
 
 const ItemListContainer = (prop) => {
   const {data } = prop
+  console.log("ggggg",data);
   const {
     image,
     title,
