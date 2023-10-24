@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import Card from "../components/Card/Card";
+import Card from "../../components/Card/Card";
 
 const Category = () => {
   let { categoryId } = useParams()
@@ -19,7 +19,7 @@ const Category = () => {
   // filtremos solamente los personajes que coincidan con el categoryId
   // que nos llega por paramentro
   useEffect(() => {
-    axios(`https://fakestoreapi.com/products/category/${map[categoryId]}`)
+    axios(`https://fakestoreapi.com/products/category/${map[categoryId]}`)  // empoi o url
     .then((res) => {
       console.log("resres",res.data);
       SetItems(res.data)

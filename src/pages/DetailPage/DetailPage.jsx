@@ -1,7 +1,8 @@
 import { useState, useEffect} from "react";
 import axios from "axios";
 import { useParams } from 'react-router-dom';
-import Card from '../components/Card/Card';
+import Card from '../../components/Card/Card';
+import CounterContainer from "../../components/Counter/CounterContainer";
 
 const DetailPage = () => {
     let { id } = useParams();
@@ -21,6 +22,7 @@ const DetailPage = () => {
     return (
         <div style={{ display: "flex", justifyContent: "center", margin: 20 }}>
             {item.id ? <Card data={item} /> : null}
+            <CounterContainer/>
         </div>
     );
 };

@@ -1,6 +1,6 @@
 import "./ListCardProducts.css";
 import { useState, useEffect} from "react";
-import Card from '../Card/Card'
+import Card from '../../components/Card/Card'
 import { Link } from "react-router-dom";
 
 //import axios from "axios";

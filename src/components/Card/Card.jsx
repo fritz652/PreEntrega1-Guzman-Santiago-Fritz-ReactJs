@@ -39,7 +39,7 @@ const ItemListContainer = (prop) => {
         </CardContent>
       </CardActionArea>
       <Stack direction="row" spacing={2} >
-              <Button variant="contained">Contained</Button>
+              <Button variant="contained">Ver detalle</Button>
       </Stack>
     </Card>
   );

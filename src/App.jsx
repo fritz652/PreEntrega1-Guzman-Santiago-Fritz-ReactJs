@@ -6,37 +6,31 @@ import  { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import './App.css';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
-//import ItemListContainer from './components/itemListContainer/itemListContainer';
+
 
 //PAGES
-//import Home from "./pages/Home";
-import ListCardProducts from "./components/ListCard/ListCardProducts";
-/* import Hombre from "./pages/Hombre";
-import Mujer from "./pages/Mujer";
-import Kids from "./pages/Kids"; */
-import NotFound from './pages/NotFound';
-import DetailPage from "./pages/DetailPage";
-
-import CategoryPage from './pages/CategoryPage';          
+import ListCardProducts from "./pages/ListCard/ListCardProducts";
+import NotFound from './pages/NotFound/NotFound';
+import DetailPage from "./pages/DetailPage/DetailPage";
+import CategoryPage from './pages/CategoryPage/CategoryPage';
+import Profile from "./pages/Profile/Profile";
+import Cart from "./pages/Cart/Cart";          
 
 
 const  App = () => {
   return (
     <Router>
       <div><Header/></div>
-      <div><NavBar/></div>
-      <div className='df-3'>
-        {/* <ItemListContainer/>
-        <ItemListContainer/>
-        <ItemListContainer/>
-        <ItemListContainer/> */}
-      </div>
+      <div className='df-3'></div>
       <Routes>
-        <Route path="/" element={<ListCardProducts/>}/>
-        <Route path="/detail/:id" element={<DetailPage/>}/>
-        <Route path="/productos/:categoryId" element={<CategoryPage/>}/>
-        <Route path='*' element={<NotFound/>}/>
-
+        <Route element={<NavBar/>}>
+            <Route path="/" element={<ListCardProducts/>}/>
+            <Route path="/detail/:id" element={<DetailPage/>}/>
+            <Route path="/productos/:categoryId" element={<CategoryPage/>}/>
+            <Route path="/profile" element={<Profile/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+        </Route>
+            <Route path='*' element={<NotFound/>}/>
       </Routes>
     </Router>
   )
