@@ -21,7 +21,13 @@ const CounterContainer = (/* {stock} */) => {
         }
     };
 
-  return <CounterPresentation sumar={sumar} restar={restar} contador={contador}/>
+  return (
+            <CounterPresentation 
+                sumar={sumar} 
+                restar={restar} 
+                contador={contador}
+            />
+  )
 }
 
 export default CounterContainer
