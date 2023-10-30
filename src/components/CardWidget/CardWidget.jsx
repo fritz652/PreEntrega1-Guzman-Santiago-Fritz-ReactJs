@@ -12,7 +12,7 @@ const CardWidget = () => {
         <li><Link to="/profile"><PersonOutlineOutlinedIcon/></Link></li>
         <li>
           <Link to="/cart">
-                <Badge badgeContent={4} color="primary">
+                <Badge badgeContent={4} showZero color="primary">
                    <ShoppingCartOutlinedIcon />
                 </Badge>
           </Link>
